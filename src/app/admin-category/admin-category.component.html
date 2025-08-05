@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Admin Category</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- <form [formGroup]="categoryForm"> -->
+    <ion-list>
+      <ion-input label="Category Name" label-placement="floating" fill="outline" 
+      [(ngModel)]="categoryName"
+        placeholder="e.g. Dairy Name">
+      </ion-input>
+
+      <ion-select label="Select Category Type" label-placement="floating" fill="outline" [(ngModel)]="categoryType">
+        <ion-select-option *ngFor="let type of categoryTypes" [value]="type">
+          {{ type }}
+        </ion-select-option>
+      </ion-select>
+      <ion-input label="Product Name" label-placement="floating" fill="outline" [(ngModel)]="productName"
+        placeholder="Enter the Product Name">
+      </ion-input>
+
+
+      <ion-input label="Product Image Url :" label-placement="floating" fill="outline" [(ngModel)]="productImageUrl"
+        placeholder="Enter URL Path">
+      </ion-input>
+
+
+
+      <ion-input label="Product Weight : " label-placement="floating" fill="outline" [(ngModel)]="productWeight"
+        placeholder="Enter the product weight">
+      </ion-input>
+
+      <ion-input label="Product Original Price :" label-placement="floating" fill="outline"
+        [(ngModel)]="productOriginalPrice" placeholder="Enter the original price">
+      </ion-input>
+
+      <ion-input label="Product Offer Price : " label-placement="floating" fill="outline"
+        [(ngModel)]="productOfferPrice" placeholder="Enter the offer price">
+      </ion-input>
+<!--     
+       <label class="form-label fw-semibold text-muted">Upload Images</label>
+        <input type="file" class="form-control shadow-sm" (change)="onImageUpload($event)" multiple accept="image/*"> -->
+
+        
+      <ion-button expand="block" color="success" (click)="addCategoryCollection()">
+        Add Category
+      </ion-button>
+    </ion-list>
+  <!-- </form> -->
+  <!-- dsfsfdsfdsf -->
+
+
+  <!-- <ion-list style="margin-top: 50px;">
+    <ion-label class="ion-margin">
+      Update Category
+    </ion-label>
+    <ion-input label="Category Sub Name" label-placement="floating" fill="outline" [(ngModel)]="categorySubName"
+      placeholder="e.g. Dairy">
+    </ion-input>
+
+    <ion-select label="Select Category Type" label-placement="floating" fill="outline" [(ngModel)]="categoryType" (ionChange)="handleChange($event)">
+      <ion-select-option *ngFor="let type of categoryTypes" [value]="type">
+        {{ type }}
+      </ion-select-option>
+    </ion-select>
+
+    <ion-select label="Select Category Sub Type" label-placement="floating" fill="outline"
+      [(ngModel)]="categorySubType">
+      <ion-select-option *ngFor="let type of categorySubTypes" [value]="type">
+        {{ type }}
+      </ion-select-option>
+    </ion-select>
+
+    <ion-button expand="block" color="success" (click)="updateCategoryCollection()">
+      Update Category Sub Collection
+    </ion-button>
+  </ion-list> -->
+
+</ion-content>

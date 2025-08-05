@@ -1,0 +1,90 @@
+<ion-content class="ion-padding ">
+  <ion-grid>
+    <ion-row class="ion-padding-top">
+      <ion-col>
+        <ion-card-title class="ion-text-center" color="dark"><strong>Kaja Store</strong></ion-card-title>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-margin-top">
+      <ion-col>
+        <form [formGroup]="form" (ngSubmit)="signup()">
+
+           <ion-item>
+            <ion-icon color="dark" size="small" name="text-outline" slot="start"></ion-icon>
+            <ion-input placeholder="Username" type="text" formControlName="username"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon color="dark" size="small" name="person" slot="start"></ion-icon>
+            <ion-input placeholder="Email" type="email" formControlName="email"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon color="dark" size="small" name="lock-closed-outline" slot="start"></ion-icon>
+            <ion-input placeholder="Password" type="password" formControlName="password">
+              <ion-input-password-toggle color="dark" slot="end"></ion-input-password-toggle>
+            </ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon color="dark" size="small" name="lock-closed-outline" slot="start"></ion-icon>
+            <ion-input placeholder="Confirm password" type="password" formControlName="confirmPassword">
+              <ion-input-password-toggle color="dark" slot="end"></ion-input-password-toggle>
+            </ion-input>
+          </ion-item>
+
+          <ion-button expand="block" type="submit" [disabled]="form.invalid" color="success">Sign up</ion-button>
+        </form>
+         <div class="ion-padding ion-text-center ion-margin-top">
+           <ion-text color="dark">
+             Already have an account? <a routerLink="/login" style="text-decoration: none;color: rgb(104, 201, 104);">Log
+               in</a>
+           </ion-text>
+         </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-padding">
+      <ion-col class="ion-text-center">
+        <ion-text>Get the app</ion-text>
+      </ion-col>
+
+      <ion-row class="ion-margin">
+        <ion-col size="6">
+          <a href="https://apps.apple.com">
+            <img alt="Download on the App Store" class="x1vqgdyp" src="assets/icon/appstore.png">
+          </a>
+        </ion-col>
+        <ion-col size="6">
+          <a href="https://play.google.com/store">
+            <img alt="Get it on Google Play" class="x1vqgdyp" src="assets/icon/playstore.png"> </a>
+        </ion-col>
+      </ion-row>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-grid class="ion-text-center ion-padding">
+    <ion-row>
+      <ion-col size="12">
+        <ion-text color="medium">About</ion-text> ·
+        <ion-text color="medium">Help</ion-text> ·
+        <ion-text color="medium">Meta</ion-text> ·
+        <ion-text color="medium">API</ion-text> ·
+        <ion-text color="medium">Jobs</ion-text> ·
+        <ion-text color="medium">Privacy</ion-text> ·
+        <ion-text color="medium">Terms</ion-text> ·
+        <ion-text color="medium">Locations</ion-text> ·
+        <ion-text color="medium">Language</ion-text>
+      </ion-col>
+
+      <ion-col class="ion-padding">
+        <ion-text color="medium">
+          © 2025, Kaja Store. All rights reserved.
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

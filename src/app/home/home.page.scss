@@ -1,27 +1,60 @@
-#container {
+ion-toolbar::part(background){
+  // background: rgb(126, 197, 126);
+  background: rgba(var(--ion-color-success-rgb), 0.8);
+}
+
+.big-avatar {
+  width: 80px;
+  height: 80px;
+}
+.avatar-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.searchflex{
+  display: flex;
+  justify-content: space-around;
+}
+.searchflex img{
+  margin-top: 6px;
+  width: 45px;
+  height: 45px;
+  margin-left: 2px;
+}
+.discount{
+  margin-top:15px ;
+}
+.discount2{
+  margin-top:30px ;
+}
+.textcenter{
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-top: 80px;
+}
+.imgflex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatarsize{
+  width: 150px;
+  height: 160px;
+  margin-right: 12px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ion-padding{
+   --background: url('/assets/background-light-colour.jpg') no-repeat center center / cover;
+}
+.flexxx{
+  display: flex;
+}
+.label{
+  margin-top: 8px;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
