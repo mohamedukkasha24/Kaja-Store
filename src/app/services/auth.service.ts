@@ -7,6 +7,9 @@ import {
   User,
   signOut,
   updateProfile,
+  GoogleAuthProvider,
+  signInWithPopup,
+  FacebookAuthProvider,
 } from '@angular/fire/auth';
 import { BehaviorSubject } from 'rxjs';
 import { doc, updateDoc, Firestore } from '@angular/fire/firestore';
@@ -26,6 +29,15 @@ export class AuthService {
 
   login(email: string, password: string) {
     return signInWithEmailAndPassword(this.auth, email, password);
+  }
+  // Google login
+  loginWithGoogle() {
+    const provider = new GoogleAuthProvider();
+    return signInWithPopup(this.auth, provider);
+  }
+  async loginWithFacebook() {
+    const provider = new FacebookAuthProvider();
+    return signInWithPopup(this.auth, provider);
   }
 
   signup(email: string, password: string) {

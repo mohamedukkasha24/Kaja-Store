@@ -17,6 +17,17 @@ bootstrapApplication(AppComponent, {
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     provideIonicAngular(),
     provideHttpClient(),
-    provideRouter(routes, withPreloading(PreloadAllModules)), provideFirebaseApp(() => initializeApp(environment.firebaseConfig)), provideAuth(() => getAuth()), provideFirestore(() => getFirestore()),{ provide: FIREBASE_OPTIONS, useValue: environment.firebaseConfig},
+
+
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+
+
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+
+    provideRouter(routes, withPreloading(PreloadAllModules)),
+
+
+    { provide: FIREBASE_OPTIONS, useValue: environment.firebaseConfig },
   ],
 });
